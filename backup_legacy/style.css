@@ -1,0 +1,39 @@
+/* === ICON BAR & ROZET === */
+.coin-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 2px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.coin-img:hover {
+  transform: scale(1.15);
+}
+
+.coin-chip {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font: 600 12px/1 system-ui;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s;
+  user-select: none;
+  background: #444;
+}
+.coin-chip:hover {
+  transform: scale(1.15);
+}
+
+.coin-wrap {
+  position: relative;
+}
+.coin-wrap.active {
+  outline: 2px solid #00bfff;
+  border-radius: 999px;
+  box-shadow: 0 0 0 3px rgba(0, 191, 255, 0.25);
+}

@@ -1,0 +1,374 @@
+/* ---------- temel ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  color: #e6e6e6;
+  background: #0b0f16;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    Arial;
+  line-height: 1.35;
+}
+
+#root {
+  max-width: 1440px; /* geniş ekranlarda merkez genişlik */
+  margin: 0 auto;
+  padding: 16px;
+  text-align: left; /* ortalama kapalı */
+}
+
+/* ---------- kart iskeleti ---------- */
+.card {
+  width: 100%;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 12px;
+}
+
+.card .hd {
+  font-weight: 700;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* rozetler / pill */
+.badge,
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: rgba(255, 255, 255, 0.06);
+}
+.pill.up {
+  color: #34d399;
+  background: rgba(34, 197, 94, 0.12);
+}
+.pill.down {
+  color: #fb7185;
+  background: rgba(244, 63, 94, 0.12);
+}
+.muted {
+  color: #9aa4b2;
+}
+
+/* ---------- 3 kolon grid düzeni ---------- */
+.container.grid-3 {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr) 340px; /* sol – orta – sağ */
+  gap: 20px;
+  align-items: start;
+}
+
+/* sütunlar */
+.col-left {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+main {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.col-right {
+  grid-column: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* sol canlı ticker kutusu (taşma kontrol) */
+.side-ticker {
+  max-height: calc(100vh - 140px);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* ---------- bar grafik ---------- */
+.bars {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(44px, 1fr);
+  align-items: end;
+  gap: 12px;
+  height: 360px;
+  position: relative;
+  padding-top: 28px; /* üstte rozet payı */
+  padding-bottom: 26px; /* alttaki fiyat etiketi */
+  overflow: visible;
+}
+.bar {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+.bar .badge {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.bar .bar-body {
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 8px;
+  min-height: 6px;
+  opacity: 0.95;
+  transition: height 0.35s ease;
+}
+
+/* tooltip */
+.tooltip {
+  background: #0f1522;
+  border: 1px solid #1f2a3c;
+  padding: 8px 10px;
+  border-radius: 10px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+  min-width: 140px;
+}
+.tooltip .up {
+  color: #34d399;
+}
+.tooltip .down {
+  color: #fb7185;
+}
+
+/* tablo */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table th,
+.table td {
+  white-space: nowrap;
+  padding: 6px 8px;
+}
+
+/* partner listesi */
+.partner {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.partner .logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  font-weight: 700;
+}
+
+/* küçük sekmeler */
+.tabs.small {
+  display: flex;
+  gap: 6px;
+  margin: 6px 0 8px;
+}
+.tabs .tab {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+.tabs .tab.active {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ---------- responsive kırılımlar ---------- */
+/* Orta ekran: sağ sütun alta insin (2 kolon) */
+@media (max-width: 1200px) {
+  .container.grid-3 {
+    grid-template-columns: 280px minmax(0, 1fr);
+  }
+  .col-left {
+    grid-column: 1;
+  }
+  main {
+    grid-column: 2;
+  }
+  .col-right {
+    grid-column: 1 / -1;
+  } /* sağ sütun en alta, tam genişlik */
+}
+
+/* Küçük ekran: tek kolon, sticky kapansın */
+@media (max-width: 760px) {
+  #root {
+    padding: 12px;
+  }
+  .container.grid-3 {
+    grid-template-columns: 1fr;
+  }
+  .col-left,
+  main,
+  .col-right {
+    grid-column: 1;
+  }
+  .side-card.sticky {
+    position: static;
+  }
+  .bars {
+    height: 280px;
+  }
+}
+/* 3 kolon: sol 300, orta esnek, sağ 340 */
+.container.grid-3 {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr) 340px;
+  gap: 20px;
+  align-items: start;
+}
+
+/* Sol/sağ sütunlar ve aralarındaki dikey boşluk */
+.col-left,
+.col-right {
+  display: flex;
+  flex-direction: column;
+}
+.col-left > * + *,
+.col-right > * + * {
+  margin-top: 16px; /* Ticker ile Insights arasına net boşluk */
+}
+
+/* Ticker alanı taşmasın, kendi içinde scroll */
+.side-ticker {
+  max-height: calc(100vh - 140px);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.col-left > * + *,
+.col-right > * + * {
+  margin-top: 16px;
+} /* gerekirse 56px/72px yap */
+/* Sticky kartlar iskeletten esnemesin */
+.side-card.sticky {
+  position: sticky;
+  top: 16px;
+  align-self: start; /* grid/flex esnetmesin */
+  z-index: 2; /* olası üst üste gelmelerde üste çıksın */
+}
+
+/* Ticker kutusu kendi içinde kayabilsin, sticky kart taşmasın */
+.side-ticker {
+  max-height: calc(100vh - 140px);
+  overflow: auto;
+}
+/* Sadece SOL kolondaki ticker'ı yapışkan yap */
+.ticker-sticky {
+  position: sticky;
+  top: 84px; /* navbar + üst boşluk kadar. 64–96 arasında deneyebilirsin */
+  align-self: start; /* Safari için */
+  z-index: 3;
+}
+
+/* Ticker iç listesi kendi içinde kayabilsin */
+.side-ticker {
+  max-height: calc(
+    100vh - 140px
+  ); /* ihtiyaca göre 120–160 arası ayarlanabilir */
+  overflow-y: auto;
+} /* --- genel: yatay taşmayı kapat --- */
+html,
+body {
+  overflow-x: hidden; /* parmakla sağ-sol itince sayfa kaymasın */
+}
+
+/* grid sütunları taşmasın */
+.col-left,
+main,
+.col-right {
+  min-width: 0;
+}
+
+/* sol/sağ dikey boşluk garanti */
+.col-left > * + *,
+.col-right > * + * {
+  margin-top: 16px;
+}
+
+/* sticky sadece karta; güvenli üst boşluk */
+.side-card.sticky {
+  position: sticky;
+  top: 16px;
+  align-self: start;
+  z-index: 2;
+}
+
+/* ticker’ın kendi içinde scroll (kart taşmıyor) */
+.side-ticker {
+  max-height: calc(100vh - 140px);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* tablo genişse yatay scroll’u sadece tabloda tut */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table th,
+.table td {
+  white-space: nowrap;
+  padding: 6px 8px;
+}
+
+/* çubuk grafik konteyneri kolonu taşırmasın */
+.bars {
+  width: 100%;
+}
+/* sayfanın yatay kaymasını kesin kapat */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* grid çocuklarının genişlik taşırmamasını garanti et */
+.col-left,
+main,
+.col-right {
+  min-width: 0;
+}
+
+/* sol/sağ dikey aralık */
+.col-left > * + *,
+.col-right > * + * {
+  margin-top: 16px;
+}
+
+/* (Eğer dosyada varsa) aşağıdakileri ya sil ya da devre dışı bırak */
+/*
+.side-card.sticky { position: sticky; top:16px; ... }
+.ticker-sticky { ... }  // varsa tamamen kaldır
+*/
+/* opsiyonel: sadece ticker kartına sticky */
+.col-left .card:nth-of-type(2) {
+  position: sticky;
+  top: 16px;
+}

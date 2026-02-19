@@ -1,0 +1,37 @@
+[
+    {
+        "id": "1",
+        "date": "2026-02-18",
+        "title": "Kuantum Çağında Veri Güvenliği",
+        "content": "Kuantum bilgisayarların gelişimiyle birlikte, klasik şifreleme yöntemleri risk altına giriyor. HQC-128 gibi post-quantum algoritmaların otomotiv sektöründe uygulanması artık bir seçenek değil, zorunluluktur.",
+        "category": "Security"
+    },
+    {
+        "id": "2",
+        "date": "2026-02-17",
+        "title": "Quantum Radar ve TÜBİTAK Çalışmaları",
+        "content": "TÜBİTAK 1001 projemizdeki Quantum Radar çalışmaları, düşük tesbit edilebilirliğe sahip hedeflerin saptanmasında yeni bir ufuk açıyor. Bu teknoloji, siber güvenlikten savunma sanayiine kadar her şeyi değiştirecek.",
+        "category": "Research"
+    },
+    {
+        "id": "3",
+        "date": "2026-02-19",
+        "title": "HQC Algoritması ve Hata Düzeltme Kapasitesi",
+        "content": "Hamming Quasi-Cyclic (HQC) kodları, kafes tabanlı sistemlere kıyasla daha küçük anahtar boyutları sunuyor. RK_2.0 araştırmalarımda, Reed-Muller ve Reed-Solomon kodlarının bu yapıdaki sinerjisini inceliyorum.",
+        "category": "Cryptography"
+    },
+    {
+        "id": "4",
+        "date": "2026-02-19",
+        "title": "Algoritmik Finansta Volatilite Modelleme",
+        "content": "Kripto piyasalarındaki yüksek volatilite, aslında doğru algoritmalar için büyük bir fırsat havuzu. Midas Terminal projemde, GARCH modellerini gerçek zamanlı veri akışıyla optimize ediyorum. Yatırım tavsiyesi değildir.",
+        "category": "Finance"
+    },
+    {
+        "id": "5",
+        "date": "2026-02-19",
+        "title": "RK_2.0: Hibrit Bir Kimlik Oluşturmak",
+        "content": "Hem bir mühendislik öğrencisi hem de bağımsız bir araştırmacı olmak, teorik bilgi ile pratik uygulama arasında köprü kurmayı gerektiriyor. Bu dijital vitrin, bu iki dünyayı birleştirme çabamın bir parçası.",
+        "category": "General"
+    }
+]

@@ -1,0 +1,40 @@
+[
+    {
+        "id": "quantum-radar",
+        "name": "Quantum Radar Phase 2",
+        "description": "TÜBİTAK kapsamında dolanıklık temelli kuantum radar sistemleri üzerine teorik ve algoritmik çalışmalar.",
+        "tech": [
+            "Qiskit",
+            "ALTAIR",
+            "CADFEKO",
+            "Python",
+            "Quantum Information Theory",
+            "Quantum Sensing"
+        ],
+        "image": "/projects/quantum-radar.webp"
+    },
+    {
+        "id": "pqc-hqc",
+        "name": "Post-Quantum Cryptography (HQC)",
+        "description": "NIST Round 4 adayı HQC algoritmasının otomotiv telemetri ağlarında güvenli entegrasyonu.",
+        "tech": [
+            "C",
+            "PQClean",
+            "Post-Quantum Cryptography",
+            "Quantum Information Theory",
+            "Python"
+        ],
+        "image": "/projects/pqc.webp"
+    },
+    {
+        "id": "algorithmic-finance",
+        "name": "BINANCE Algorithmic Terminal",
+        "description": "Kripto varlık piyasalarında volatilite odaklı tahmin algoritmaları ve portföy yönetim terminali.",
+        "tech": [
+            "TypeScript",
+            "Next.js",
+            "Financial Modeling"
+        ],
+        "image": "/projects/finance.webp"
+    }
+]

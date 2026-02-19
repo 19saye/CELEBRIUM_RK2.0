@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns:xodm="http://www.corel.com/coreldraw/odm/2003" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 2500 2500" style="enable-background:new 0 0 2500 2500;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill:#0B76FF;}
+	.st2{fill:#24C1FF;}
+	.st3{fill:#39FFF2;}
+	.st4{fill:#00E2C2;}
+	.st5{fill:url(#SVGID_1_);}
+	.st6{fill:url(#SVGID_00000049195590551110446590000002926569127153570447_);}
+	.st7{fill:url(#SVGID_00000059307158666424891510000004854137903971108759_);}
+	.st8{fill:url(#SVGID_00000155858341472431267830000005933018167345573792_);}
+</style>
+<g id="Layer_x0020_1">
+	<rect y="0" class="st0" width="2500" height="2500"></rect>
+	<g id="_2503890022160">
+		<g>
+			<polygon class="st1" points="1248.8,1833 1768.9,1833 1248.9,925 1248.9,374.8 2268.1,2125.2 1248.7,2125.2    "></polygon>
+			<polygon class="st2" points="1248.7,1833 728.6,1833 1248.5,925 1248.5,374.8 229.3,2125.2 1248.7,2125.2    "></polygon>
+			<polygon class="st3" points="1248.7,1154.3 1248.7,1741.3 930.2,1742    "></polygon>
+			<polygon class="st4" points="1248.7,1154.3 1248.7,1741.3 1567.3,1742    "></polygon>
+			
+				<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="0" y1="1255.9698" x2="683.8" y2="1255.9698" gradientTransform="matrix(1 0 0 -1 0 2497.8899)">
+				<stop offset="0" style="stop-color:#FFFFFF;stop-opacity:0"></stop>
+				<stop offset="1" style="stop-color:#FFFFFF"></stop>
+			</linearGradient>
+			<polygon class="st5" points="0,922.4 1248.7,1500.9 1248.7,1561.5 0,1287.4    "></polygon>
+			
+				<linearGradient id="SVGID_00000149367559693678280460000018251913193698953383_" gradientUnits="userSpaceOnUse" x1="2492.23" y1="1360.1748" x2="1696.65" y2="1360.1748" gradientTransform="matrix(1 0 0 -1 0 2497.8899)">
+				<stop offset="0" style="stop-color:#FD76FD;stop-opacity:0"></stop>
+				<stop offset="1" style="stop-color:#FF51FF"></stop>
+			</linearGradient>
+			<polygon style="fill:url(#SVGID_00000149367559693678280460000018251913193698953383_);" points="2500,754.3 1248.7,1500.9      1248.7,1521.1 2500,995.3    "></polygon>
+			
+				<linearGradient id="SVGID_00000021839454215263314580000002350553003466514355_" gradientUnits="userSpaceOnUse" x1="2505.3701" y1="1098.9548" x2="1860.96" y2="1098.9548" gradientTransform="matrix(1 0 0 -1 0 2497.8899)">
+				<stop offset="0" style="stop-color:#9D6EFF;stop-opacity:0"></stop>
+				<stop offset="1" style="stop-color:#A18CFF"></stop>
+			</linearGradient>
+			<polygon style="fill:url(#SVGID_00000021839454215263314580000002350553003466514355_);" points="2500,1477.4 1248.7,1561.5      1248.7,1541.3 2500,1236.4    "></polygon>
+			
+				<linearGradient id="SVGID_00000038411919660332453740000005180895466403054484_" gradientUnits="userSpaceOnUse" x1="2498.74" y1="1229.6049" x2="1762.34" y2="1229.6049" gradientTransform="matrix(1 0 0 -1 0 2497.8899)">
+				<stop offset="0" style="stop-color:#AE60D6;stop-opacity:0"></stop>
+				<stop offset="1" style="stop-color:#AB38E6"></stop>
+			</linearGradient>
+			<polygon style="fill:url(#SVGID_00000038411919660332453740000005180895466403054484_);" points="2500,995.3 1248.7,1521.1      1248.7,1541.3 2500,1236.4    "></polygon>
+		</g>
+	</g>
+</g>
+</svg>

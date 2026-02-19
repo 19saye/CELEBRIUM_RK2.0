@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portföy</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Mevcut genel stillerin kalsın; yalnız .real-icons için merkez yerine sola yaslayalım */
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(145deg, #0f0f0f, #1e1e1e);
+        color: #fff;
+      }
+      .intro-graph {
+        width: 100vw;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        animation: slideIn 2s ease-in-out;
+      }
+      @keyframes slideIn {
+        from {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      .real-chart {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        height: 600px;
+        margin-top: 20px;
+        position: relative;
+      }
+      /* ÖNEMLİ: ikon bar grafiğin DIŞINDA ve SOLA yaslı */
+      .real-icons {
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0 0 10px 8px;
+      }
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      /* aşağısı senin mevcut kısım */
+      .profile-section {
+        width: 100vw;
+        min-height: 100vh;
+        background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 0;
+      }
+      .digital-twin {
+        width: 200px;
+        height: 200px;
+        background: url("img/your_photo.jpg") no-repeat center/cover;
+        border-radius: 50%;
+        border: 4px solid #00bfff;
+        margin-bottom: 20px;
+        animation: mouthMove 2s infinite ease-in-out;
+      }
+      @keyframes mouthMove {
+        0%,
+        100% {
+          transform: scaleY(1);
+        }
+        50% {
+          transform: scaleY(1.02);
+        }
+      }
+      .pathway {
+        width: 80%;
+        max-width: 800px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+      }
+      .path-button {
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        border: 1px solid #00bfff;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      .path-button:hover {
+        background-color: #00bfff;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="intro-graph">
+      <div class="real-chart">
+        <!-- İKON BAR: grafiğin DIŞINDA -->
+        <div id="realIconOverlay" class="real-icons"></div>
+
+        <!-- GRAFİK -->
+        <iframe
+          id="realChartIframe"
+          src="https://s.tradingview.com/widgetembed/?symbol=BINANCE:PEPEUSDT&interval=60&theme=dark&style=1"
+          allowtransparency="true"
+          scrolling="no"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+    </section>
+
+    <section class="profile-section">
+      <div class="digital-twin"></div>
+      <div class="pathway">
+        <div class="path-button">İletişim</div>
+        <div class="path-button">Projeler</div>
+        <div class="path-button">Yetenekler</div>
+        <div class="path-button">Hakkımda</div>
+      </div>
+    </section>
+
+    <!-- Artık inline <script> yok; tüm JS ayrı dosyada -->
+    <script src="script.js" defer></script>
+  </body>
+</html>
