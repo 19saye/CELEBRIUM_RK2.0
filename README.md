@@ -24,7 +24,3 @@ Tarayıcınızda `http://localhost:****` adresine giderek projeyi görüntüleye
 * `cd_cd.js`: Özel fonksiyon testleri.
 
 ---
-
-## 📄 Lisans
-
-Bu proje MIT lisansı altında lisanslanmıştır.
